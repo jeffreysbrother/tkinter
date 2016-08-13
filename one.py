@@ -3,30 +3,34 @@ from Tkinter import *
 #create blank window
 root = Tk()
 
-# theLabel = Label(root, text="boobies")
-# theLabel.pack()
-# root.title("penis")
-root.geometry("800x1000")
+def printName():
+    print("go fuck yourself")
 
-# frames
-topFrame = Frame(root)
-topFrame.pack()
-bottomFrame = Frame(root)
-bottomFrame.pack(side=BOTTOM)
+root.title("application")
+root.geometry("400x600")
 
-#label
-one = Label(root, text="mombo dogface", bg="red", fg="green")
-one.pack(fill=X)
+#button
+button_1 = Button(root, text="click me", command=printName)
 
-two = Label(root, text="mombo dogface", bg="brown", fg="yellow")
-two.pack()
+#labels
+label_1 = Label(root, text="name")
+label_2 = Label(root, text="password")
 
-#buttons
-button1 = Button(topFrame, text="tits", fg="red")
-button1.pack(side=LEFT)
+#entries
+entry_1 = Entry(root)
+entry_2 = Entry(root)
 
-button2 = Button(bottomFrame, text="tits", fg="green")
-button2.pack(side=LEFT)
+#positioning of button, labels and entries
+button_1.grid(row=0, column=0)
+
+label_1.grid(row=1, column=0, sticky=E)
+label_2.grid(row=2, column=0, sticky=E)
+
+entry_1.grid(row=1, column=1)
+entry_2.grid(row=2, column=1)
+
+c = Checkbutton(root, text="male?")
+c.grid(columnspan=2)
 
 #make application persist
 root.mainloop()
