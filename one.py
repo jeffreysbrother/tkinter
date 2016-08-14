@@ -6,11 +6,20 @@ root = Tk()
 def printName():
     print("go fuck yourself")
 
+def rightClick(event):
+    print("right clicking PIECE OF TRASH!!!")
+
+def middleClick(event):
+    print("wheelclick jackass bitch")
+
 root.title("application")
 root.geometry("400x600")
 
 #button
 button_1 = Button(root, text="click me", command=printName)
+
+button_1.bind("<Button-2>", middleClick)
+button_1.bind("<Button-3>", rightClick)
 
 #labels
 label_1 = Label(root, text="name")
