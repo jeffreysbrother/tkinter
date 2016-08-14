@@ -18,8 +18,8 @@ root.geometry("400x600")
 #button
 button_1 = Button(root, text="click me", command=printName)
 
-button_1.bind("<Button-2>", middleClick)
-button_1.bind("<Button-3>", rightClick)
+button_1.bind("<Button-2>", rightClick)
+button_1.bind("<Button-3>", middleClick)
 
 #labels
 label_1 = Label(root, text="name")
