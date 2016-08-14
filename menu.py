@@ -32,7 +32,8 @@ printButt.pack(side=LEFT, padx=2, pady=2)
 toolbar.pack(side=TOP, fill=X)
 
 # ********* Status Bar *********
-
+status = Label(root, text="preparing to do nothing like a cold female heart...'", bd=1, relief=SUNKEN, anchor=W)
+status.pack(side=BOTTOM, fill=X)
 
 
 root.mainloop()
